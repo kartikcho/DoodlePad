@@ -1,0 +1,10 @@
+canvas{
+	border: 1px solid black;
+}
+.color-picker{
+    display:flex; float:right; 
+}
+.color-picker button{ 
+    width:30px; height:30px; border:none; 
+}
+

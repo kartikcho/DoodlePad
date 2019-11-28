@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <title>DoodlePad</title>
+</head>
+
+<body>
+    <div class="color-picker">
+        <button style="background-color:black;"></button>
+        <button style="background-color:yellow;"></button>
+        <button style="background-color:green;"></button>
+        <button style="background-color:blue;"></button>
+        <button style="background-color:violet;"></button>
+        <button style="background-color:red;"></button>
+        <button style="background-color:orange;"></button>
+    </div>
+    
+        Brush size: <input id="change-brush-size" type="range" min="1" max="10">
+        <input type="file" id="elFileInput"/>
+        <br />
+        <button id="elExport" download>download as png</button>
+        <br />
+        <br />
+    
+    <div class="canvas-resize">
+        width: <input id="elCanvasWidth" type="number"> height: <input id="elCanvasHeight" type="number">
+        </div>
+        <img id="preloadImg" style="display: none;">
+        <br />
+        <canvas id="c">not supported :(</canvas>
+    </div>
+</body>
+
+</html>
