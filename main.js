@@ -16,6 +16,8 @@ function init() {
     elCanvasHeight.value = DEFAULT_CANVAS_HEIGHT;
     canvas.width = DEFAULT_CANVAS_WIDTH;
     canvas.height = DEFAULT_CANVAS_HEIGHT;
+
+    intialBrushSize()
 }
 init();
 
@@ -104,8 +106,15 @@ colors.forEach(button => {
     })
 })
 
-// Brush size
-document.querySelector('#change-brush-size').addEventListener("change", e => {
+// // Intial brush size
+function intialBrushSize() {
+    var slider = document.getElementById("change-brush-size");
+    var output = document.getElementById("display-brush-size");
+    output.innerHTML = slider.value;
+}
+
+// Brush size on change
+document.querySelector('#change-brush-size').addEventListener("input", e => {
     let brushSize = parseInt(e.target.value)
     mouse.brushSize = brushSize
     document.querySelector('#display-brush-size').innerHTML = brushSize
