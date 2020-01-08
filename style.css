@@ -1,10 +1,48 @@
-canvas{
-	border: 1px solid black;
-}
-.color-picker{
-    display:flex; float:right; 
-}
-.color-picker button{ 
-    width:30px; height:30px; border:none; 
+canvas {
+    border: 1px solid black;
 }
 
+.color-picker {
+    display: flex;
+    float: right;
+}
+
+.color-picker button {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: none;
+}
+
+#change-brush-size {
+    -webkit-appearance: none;
+    width: 20%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+#change-brush-size:hover {
+    opacity: 1;
+}
+
+#change-brush-size::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(2, 226, 39);
+    cursor: pointer;
+}
+
+#change-brush-size::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(2, 226, 39);
+    cursor: pointer;
+}
