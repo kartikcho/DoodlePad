@@ -3,7 +3,7 @@ const DEFAULT_CANVAS_HEIGHT = 720;
 
 let elFileInput = document.getElementById("elFileInput");
 let canvas = document.getElementById("c"); 
-let ctx = canvas.getContext("2d");
+// let ctx = canvas.getContext("2d");
 let preloadImage = document.getElementById("preloadImage");
 let elExport = document.getElementById("elExport");
 let elCanvasWidth = document.querySelector('#elCanvasWidth');
@@ -22,7 +22,7 @@ init();
 // Open file option
 elFileInput.onchange = function(){
 	preload_file(this.files);
-	draw_preload_to_canvas(ctx,preloadImg);
+	// draw_preload_to_canvas(ctx,preloadImg);
 }
 
 function preload_file(fileList){
@@ -55,18 +55,18 @@ canvas.addEventListener("mousedown",() => {
 canvas.addEventListener("mouseup",() => { 
 	mouse.down = false 
 })
-canvas.addEventListener("mousemove",e => {
-	if( mouse.down ){
-  	ctx.beginPath()
-  	ctx.moveTo( mouse.lastPosition.x , mouse.lastPosition.y )
-    ctx.lineTo( e.offsetX , e.offsetY )
-    ctx.strokeStyle = mouse.color
-    ctx.lineWidth = mouse.brushSize
-    ctx.stroke()
-  }
-  mouse.lastPosition.x = e.offsetX
-  mouse.lastPosition.y = e.offsetY
-})
+// canvas.addEventListener("mousemove",e => {
+// 	if( mouse.down ){
+//   	ctx.beginPath()
+//   	ctx.moveTo( mouse.lastPosition.x , mouse.lastPosition.y )
+//     ctx.lineTo( e.offsetX , e.offsetY )
+//     ctx.strokeStyle = mouse.color
+//     ctx.lineWidth = mouse.brushSize
+//     ctx.stroke()
+//   }
+//   mouse.lastPosition.x = e.offsetX
+//   mouse.lastPosition.y = e.offsetY
+// })
 
 // Export option (crude)
 elExport.onclick = function(){
@@ -109,12 +109,12 @@ let H = canvas.height;
 elCanvasWidth.onchange = function(){
 	let imageData = ctx.getImageData(0,0,W,H);
   canvas.width = this.value;
-  ctx.putImageData(imageData,0,0);
+//   ctx.putImageData(imageData,0,0);
 }
 elCanvasHeight.onchange = function(){
 	let imageData = ctx.getImageData(0,0,W,H);
   canvas.height = this.value;
-  ctx.putImageData(imageData,0,0);
+//   ctx.putImageData(imageData,0,0);
 }
 
 
